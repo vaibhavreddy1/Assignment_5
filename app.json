@@ -1,0 +1,66 @@
+{
+  "expo": {
+    "name": "HDFC Life Advisor",
+    "slug": "hdfc-life-advisor-rn",
+    "version": "1.0.0",
+    "scheme": "hdfclife",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hdfclife.advisor",
+      "infoPlist": {
+        "NSCameraUsageDescription": "HDFC Life Advisor needs camera access to photograph hospital bills for claims.",
+        "NSPhotoLibraryUsageDescription": "HDFC Life Advisor needs photo library access to attach hospital bill images to claims.",
+        "NSLocationWhenInUseUsageDescription": "HDFC Life Advisor needs your location to show it relative to the branch on the map."
+      }
+    },
+    "android": {
+      "package": "com.hdfclife.advisor",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#D42027"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "HDFC Life Advisor needs photo library access to attach hospital bill images to claims.",
+          "cameraPermission": "HDFC Life Advisor needs camera access to photograph hospital bills for claims."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "HDFC Life Advisor needs your location to show it relative to the branch on the map."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#D42027"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {}
+    }
+  }
+}
